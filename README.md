@@ -36,3 +36,10 @@ curl https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu/refs/heads/main/do
 ```sh
 curl https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu/refs/heads/main/mise.sh | /usr/bin/env sh
 ```
+## add crt
+```sh
+sudo cp /mnt/c/Path/To/Your/certificate.crt /usr/local/share/ca-certificates/
+```
+```sh
+sudo update-ca-certificates
+```
