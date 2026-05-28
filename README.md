@@ -20,10 +20,6 @@ wsl --uninstall
 ```powershell
 wsl --list
 ```
-## fix slow sudo apt update, change http to https
-```sh
-sudo nano /etc/apt/sources.list.d/ubuntu.sources
-```
 ## check ubuntu version
 ```sh
 lsb_release -a
