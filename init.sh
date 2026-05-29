@@ -27,5 +27,4 @@ curl https://raw.githubusercontent.com/chubbyhippo/starship/main/install-bash.sh
 curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sudo sh -s -- -b /usr/local/bin v0.59.1
 # rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-# emacs
-curl https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu/refs/heads/main/emacs.sh | /usr/bin/env bash
+
