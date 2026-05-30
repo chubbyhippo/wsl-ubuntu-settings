@@ -20,7 +20,7 @@ curl https://raw.githubusercontent.com/chubbyhippo/fzf/refs/heads/main/install.s
 # mise
 curl https://raw.githubusercontent.com/chubbyhippo/mise/refs/heads/main/install-bash.sh | /usr/bin/env bash
 # starship
-curl https://raw.githubusercontent.com/chubbyhippo/starship/main/install-bash.sh | /usr/bin/env bash
+curl -sS https://starship.rs/install.sh | sh
 # bashrc
 [ -f ~/.bashrc ] && curl https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu/main/.bashrc >> ~/.bashrc || curl https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu/main/.bashrc -o ~/.bashrc
 # trivy
