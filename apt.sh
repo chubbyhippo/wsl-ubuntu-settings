@@ -3,7 +3,6 @@
 sudo apt install build-essential -y
 sudo apt install cmake -y
 sudo apt install fd-find -y
-sudo apt install guile-3.0 -y
 sudo apt install leiningen -y
 sudo apt install markdown -y
 sudo apt install ripgrep -y
