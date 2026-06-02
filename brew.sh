@@ -4,3 +4,5 @@
 
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"' >> /home/vm/.bashrc
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+
+brew install --cask font-jetbrains-mono-nerd-font
