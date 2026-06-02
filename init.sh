@@ -11,10 +11,6 @@ curl https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/head
 [ -d "${XDG_CONFIG_HOME:-$HOME/.config}/nvim" ] && rm -rf "${XDG_CONFIG_HOME:-$HOME/.config}/nvim"; mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim && curl https://raw.githubusercontent.com/chubbyhippo/init.lua/main/init.lua -o "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim/init.lua
 # docker
 curl https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/docker.sh | /usr/bin/env sh
-# minikube
-# curl https://raw.githubusercontent.com/chubbyhippo/minikube/refs/heads/main/install.sh | /usr/bin/env sh
-# tilt
-# curl -fsSL https://raw.githubusercontent.com/tilt-dev/tilt/master/scripts/install.sh | bash
 # fzf
 curl https://raw.githubusercontent.com/chubbyhippo/fzf/refs/heads/main/install.sh | /usr/bin/env sh
 # mise
