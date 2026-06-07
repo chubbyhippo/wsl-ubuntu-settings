@@ -7,7 +7,6 @@ sudo apt install fd-find -y
 sudo apt install file -y
 sudo apt install git -y
 sudo apt install guile-3.0 -y
-sudo apt install leiningen -y
 sudo apt install markdown -y
 sudo apt install procps -y
 sudo apt install ripgrep -y
