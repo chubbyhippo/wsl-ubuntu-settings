@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-curl -fsSL https://get.docker.com | sudo sh
+command -v docker >/dev/null 2>&1 || curl -fsSL https://get.docker.com | sudo sh
 
-sudo groupadd docker
+sudo groupadd -f docker
 sudo usermod -aG docker $USER
