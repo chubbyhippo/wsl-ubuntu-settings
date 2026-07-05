@@ -1,0 +1,12 @@
+# %UserProfile%\.wslconfig — Windows-side settings for all WSL2 distros
+# (wsl.sh copies this into place, only when no .wslconfig exists yet).
+# Everything ships commented out — uncomment what you want, then: wsl --shutdown
+
+[wsl2]
+# memory=8GB               # cap WSL2 RAM (default: half of Windows RAM)
+# processors=4             # cap CPUs
+# networkingMode=mirrored  # share Windows' interfaces (localhost works both ways)
+
+[experimental]
+# autoMemoryReclaim=gradual # hand idle cached RAM back to Windows
+# sparseVhd=true            # let the virtual disk shrink as files are deleted
