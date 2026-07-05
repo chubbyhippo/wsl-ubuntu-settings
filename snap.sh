@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-sudo snap install emacs --channel=pgtk --classic
+snap list emacs >/dev/null 2>&1 || sudo snap install emacs --channel=pgtk --classic
