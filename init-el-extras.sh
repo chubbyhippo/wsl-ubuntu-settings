@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # Language servers and debuggers for init.el's extras
-# (clojure, cpp, go, python, rust, typescript, zig).
+# (clojure, cpp, go, java, python, rust, typescript, zig).
 # Runtimes come from mise (go, node) and rustup (cargo); tree-sitter grammars
 # are installed inside Emacs (M-x treesit-install-language-grammar).
 
@@ -30,6 +30,14 @@ curl -fsSL https://raw.githubusercontent.com/clojure-lsp/clojure-lsp/master/inst
 # go: gopls + delve, installed to ~/go/bin (.bashrc puts it on PATH)
 go install golang.org/x/tools/gopls@latest
 go install github.com/go-delve/delve/cmd/dlv@latest
+
+# java: jdtls (Eclipse JDT language server) + the java-debug plugin jar
+# that extras/java.el loads into it for dape debugging
+mkdir -p "$HOME/.local/share/jdtls" "$HOME/.local/share/java-debug" "$HOME/.local/bin"
+curl -fsSL https://download.eclipse.org/jdtls/snapshots/jdt-language-server-latest.tar.gz | tar -xz -C "$HOME/.local/share/jdtls"
+ln -sf "$HOME/.local/share/jdtls/bin/jdtls" "$HOME/.local/bin/jdtls"
+JAVA_DEBUG_VERSION=$(curl -fsSL https://repo1.maven.org/maven2/com/microsoft/java/com.microsoft.java.debug.plugin/maven-metadata.xml | grep -o '<latest>[^<]*' | cut -d '>' -f 2)
+curl -fsSL "https://repo1.maven.org/maven2/com/microsoft/java/com.microsoft.java.debug.plugin/$JAVA_DEBUG_VERSION/com.microsoft.java.debug.plugin-$JAVA_DEBUG_VERSION.jar" -o "$HOME/.local/share/java-debug/com.microsoft.java.debug.plugin-$JAVA_DEBUG_VERSION.jar"
 
 # rust: rust-analyzer, managed by rustup like the rest of the toolchain
 rustup component add rust-analyzer
