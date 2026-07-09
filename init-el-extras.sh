@@ -28,10 +28,13 @@ sudo apt install python3-debugpy -y
 # clojure: clojure-lsp (CIDER itself needs only the JVM + lein)
 command -v clojure-lsp >/dev/null 2>&1 || curl -fsSL https://raw.githubusercontent.com/clojure-lsp/clojure-lsp/master/install | sudo bash
 
-# scheme (SICP): Chez Scheme for geiser-chez. Ubuntu ships the binary as
-# `chezscheme' (extras/scheme.el sets geiser-chez-binary to match); scheme-mode,
-# geiser and paredit are built-in / NonGNU ELPA, installed by Emacs.
-sudo apt install -y chezscheme
+# scheme: Guile (the geiser default — Ubuntu's guile-3.0, also in apt.sh's base
+# set, provides plain `guile' via alternatives, exactly geiser-guile's default
+# binary; guile-3.0-doc feeds geiser's Info-manual lookup) + Chez for SICP.
+# Ubuntu ships Chez as `chezscheme' (extras/scheme.el sets geiser-chez-binary to
+# match); scheme-mode, geiser and paredit are built-in / NonGNU ELPA, installed
+# by Emacs.
+sudo apt install -y guile-3.0 guile-3.0-doc chezscheme
 
 # elixir / erlang (BEAM): runtimes via mise. Erlang compiles from source, so
 # install the OTP build deps first (minimal headless set — for the GUI observer
