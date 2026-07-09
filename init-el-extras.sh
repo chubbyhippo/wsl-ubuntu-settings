@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # Language servers and debuggers for init.el's extras
-# (clojure, cpp, elixir, erlang, go, java, python, rust, typescript, zig).
+# (clojure, cpp, elixir, erlang, go, java, python, rust, scheme, typescript, zig).
 # Runtimes come from mise (go, node, erlang, elixir) and rustup (cargo);
 # tree-sitter grammars are installed inside Emacs
 # (M-x treesit-install-language-grammar).
@@ -27,6 +27,11 @@ sudo apt install python3-debugpy -y
 
 # clojure: clojure-lsp (CIDER itself needs only the JVM + lein)
 command -v clojure-lsp >/dev/null 2>&1 || curl -fsSL https://raw.githubusercontent.com/clojure-lsp/clojure-lsp/master/install | sudo bash
+
+# scheme (SICP): Chez Scheme for geiser-chez. Ubuntu ships the binary as
+# `chezscheme' (extras/scheme.el sets geiser-chez-binary to match); scheme-mode,
+# geiser and paredit are built-in / NonGNU ELPA, installed by Emacs.
+sudo apt install -y chezscheme
 
 # elixir / erlang (BEAM): runtimes via mise. Erlang compiles from source, so
 # install the OTP build deps first (minimal headless set — for the GUI observer
