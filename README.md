@@ -54,6 +54,10 @@ curl -fsSL https://raw.githubusercontent.com/chubbyhippo/mise/refs/heads/main/in
 ```sh
 curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/init-el-extras.sh | /usr/bin/env sh
 ```
+## ai clis install (claude code, codex, gemini)
+```sh
+curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/ai.sh | /usr/bin/env sh
+```
 ## add crt
 ```sh
 sudo cp /mnt/c/Path/To/Your/certificate.crt /usr/local/share/ca-certificates/

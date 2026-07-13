@@ -25,3 +25,5 @@ command -v trivy >/dev/null 2>&1 || curl -fsSL https://raw.githubusercontent.com
 curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/brew.sh | /usr/bin/env sh
 # init.el extras (language servers + debuggers)
 curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/init-el-extras.sh | /usr/bin/env sh
+# ai clis (claude code, codex, gemini)
+curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/ai.sh | /usr/bin/env sh
