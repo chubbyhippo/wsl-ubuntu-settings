@@ -1,0 +1,14 @@
+# Global mise tool set -> ~/.config/mise/config.toml (installed by init.sh).
+# Runtimes for init.el's languages (go, node, erlang, elixir, zig + zls)
+# plus the JVM build tools and python (also the jupyterlab.sh venv base).
+[tools]
+java = "latest"
+maven = "latest"
+gradle = "latest"
+go = "latest"
+python = "latest"
+node = "lts"
+erlang = "latest"
+elixir = "latest"
+zig = "latest"
+zls = "latest"

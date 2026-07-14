@@ -46,9 +46,15 @@ curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/ref
 ```sh
 curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/brew.sh | /usr/bin/env sh
 ```
-## mise install
+## mise install (official installer + global tools from mise.toml)
 ```sh
-curl -fsSL https://raw.githubusercontent.com/chubbyhippo/mise/refs/heads/main/install-bash.sh | /usr/bin/env bash
+curl -fsSL https://mise.run | sh
+```
+```sh
+curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/mise.toml -o ~/.config/mise/config.toml
+```
+```sh
+mise install --yes
 ```
 ## init.el extras tools install
 ```sh
@@ -57,6 +63,10 @@ curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/ref
 ## ai clis install (claude code, codex, gemini)
 ```sh
 curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/ai.sh | /usr/bin/env sh
+```
+## jupyterlab install (venv + jupytermeow)
+```sh
+curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/jupyterlab.sh | /usr/bin/env sh
 ```
 ## add crt
 ```sh

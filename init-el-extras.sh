@@ -2,7 +2,8 @@
 
 # Language servers and debuggers for init.el's extras
 # (clojure, cpp, elixir, erlang, go, java, python, rust, scheme, typescript, zig).
-# Runtimes come from mise (go, node, erlang, elixir) and rustup (cargo);
+# Runtimes come from mise's global tool set (mise.toml, installed by
+# init.sh: go, node, erlang, elixir, zig + zls) and rustup (cargo);
 # tree-sitter grammars are installed inside Emacs
 # (M-x treesit-install-language-grammar).
 
@@ -36,13 +37,9 @@ command -v clojure-lsp >/dev/null 2>&1 || curl -fsSL https://raw.githubuserconte
 # by Emacs.
 sudo apt install -y guile-3.0 guile-3.0-doc chezscheme
 
-# elixir / erlang (BEAM): runtimes via mise. Erlang compiles from source, so
-# install the OTP build deps first (minimal headless set — for the GUI observer
-# / debugger add libwxgtk3.2-dev libgl1-mesa-dev). Elixir is precompiled and
-# pairs with the mise Erlang; mise's erl/elixir shims are already on PATH above.
-sudo apt install -y autoconf m4 libncurses-dev libssl-dev
-mise use -g erlang@latest
-mise use -g elixir@latest
+# elixir / erlang (BEAM): runtimes come from mise.toml via init.sh (which
+# also installs the OTP build deps erlang needs to compile); the erl/elixir
+# shims are already on PATH above.
 
 # elixir: ElixirLS — its `language_server.sh' (found by eglot) and
 # `debug_adapter.sh' (used by extras/elixir.el's dape config) go on PATH via
@@ -94,6 +91,4 @@ npm install -g typescript typescript-language-server
 mkdir -p "$HOME/.config/emacs/debug-adapters"
 [ -d "$HOME/.config/emacs/debug-adapters/js-debug" ] || curl -fsSL "$(curl -fsSL https://api.github.com/repos/microsoft/vscode-js-debug/releases/latest | grep -o 'https://[^"]*js-debug-dap[^"]*\.tar\.gz' | head -n 1)" | tar -xz -C "$HOME/.config/emacs/debug-adapters"
 
-# zig: compiler + zls
-mise use -g zig@latest
-mise use -g zls@latest
+# zig: compiler + zls come from mise.toml via init.sh
