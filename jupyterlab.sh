@@ -29,4 +29,4 @@ ln -sf "$VENV/bin/jupyter-lab" "$HOME/.local/bin/jupyter-lab"
 # PATH prepend
 mkdir -p "$HOME/projects"
 [ -d "$SRC" ] || git clone https://github.com/chubbyhippo/jupytermeow.git "$SRC"
-PATH="$VENV/bin:$PATH" "$SRC/setup.sh"
+PATH="$VENV/bin:$PATH" sh "$SRC/setup.sh"
