@@ -6,7 +6,6 @@ swapFile=C:\\temp\\wsl-swap.vhdx    # location of the swap file (put on SSD if p
 localhostForwarding=true            # allows localhost to work between Windows and WSL
 networkingMode=mirrored             # share Windows' interfaces (localhost works both ways)
 pageReporting=true                  # let WSL return unused memory back to Windows
-guiApplications=false               # disable WSLg (Linux GUI app support) to save overhead
 
 [experimental]
 autoMemoryReclaim=gradual           # hand idle cached RAM back to Windows
