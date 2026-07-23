@@ -1,12 +1,13 @@
-# %UserProfile%\.wslconfig — Windows-side settings for all WSL2 distros
-# (wsl.sh copies this into place, only when no .wslconfig exists yet).
-# Everything ships commented out — uncomment what you want, then: wsl --shutdown
-
 [wsl2]
-# memory=8GB               # cap WSL2 RAM (default: half of Windows RAM)
-# processors=4             # cap CPUs
-# networkingMode=mirrored  # share Windows' interfaces (localhost works both ways)
+memory=2GB                          # cap WSL RAM usage, leaving the rest for Windows
+processors=2                        # limit WSL to 2 of your 4 CPU cores
+swap=64GB                            # virtual swap file size, prevents OOM crashes under memory pressure
+swapFile=C:\\temp\\wsl-swap.vhdx    # location of the swap file (put on SSD if possible)
+localhostForwarding=true            # allows localhost to work between Windows and WSL
+networkingMode=mirrored             # share Windows' interfaces (localhost works both ways)
+pageReporting=true                  # let WSL return unused memory back to Windows
+guiApplications=false               # disable WSLg (Linux GUI app support) to save overhead
 
 [experimental]
-# autoMemoryReclaim=gradual # hand idle cached RAM back to Windows
-# sparseVhd=true            # let the virtual disk shrink as files are deleted
+autoMemoryReclaim=gradual           # hand idle cached RAM back to Windows
+sparseVhd=true                      # let the virtual disk shrink as files are deleted
