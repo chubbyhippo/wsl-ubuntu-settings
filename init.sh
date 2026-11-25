@@ -9,8 +9,6 @@ curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/ref
 curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/snap.sh | /usr/bin/env sh
 # docker
 curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/docker.sh | /usr/bin/env sh
-# fzf (its installer git-clones ~/.fzf, which fails when the clone exists)
-[ -d ~/.fzf ] || curl -fsSL https://raw.githubusercontent.com/chubbyhippo/fzf/refs/heads/main/install.sh | /usr/bin/env sh
 # mise (official installer; .bashrc below activates it) + the global tool
 # set from mise.toml. Erlang compiles from source, so its OTP build deps
 # come first (minimal headless set — for the GUI observer/debugger add
