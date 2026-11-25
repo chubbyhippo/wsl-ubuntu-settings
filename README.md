@@ -86,10 +86,6 @@ ln -sf ~/.local/share/superbol-studio-oss/superbol-free ~/.local/bin/superbol-fr
 ```sh
 curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/ai.sh | /usr/bin/env sh
 ```
-## jupyterlab install (venv + jupytermeow)
-```sh
-curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/jupyterlab.sh | /usr/bin/env sh
-```
 ## add crt
 ```sh
 sudo cp /mnt/c/Path/To/Your/certificate.crt /usr/local/share/ca-certificates/
