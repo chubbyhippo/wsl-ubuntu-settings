@@ -37,7 +37,7 @@ curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/ref
 ```sh
 curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/apt.sh | /usr/bin/env sh
 ```
-## snap install (emacs)
+## snap install
 ```sh
 curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/snap.sh | /usr/bin/env sh
 ```
