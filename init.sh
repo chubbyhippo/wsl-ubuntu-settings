@@ -28,5 +28,3 @@ command -v starship >/dev/null 2>&1 || curl -fsSL https://starship.rs/install.sh
 grep -qsF 'alias gac=' ~/.bashrc || curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/.bashrc >> ~/.bashrc
 # brew
 curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/brew.sh | /usr/bin/env sh
-# init.el extras (language servers + debuggers)
-curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/init-el-extras.sh | /usr/bin/env sh
