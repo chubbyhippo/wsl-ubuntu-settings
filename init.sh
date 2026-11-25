@@ -9,10 +9,7 @@ curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/ref
 curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/snap.sh | /usr/bin/env sh
 # docker
 curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/docker.sh | /usr/bin/env sh
-# mise (official installer; .bashrc below activates it) + the global tool
-# set from mise.toml. Erlang compiles from source, so its OTP build deps
-# come first (minimal headless set — for the GUI observer/debugger add
-# libwxgtk3.2-dev libgl1-mesa-dev).
+# mise
 [ -x ~/.local/bin/mise ] || curl -fsSL https://mise.run | sh
 mkdir -p ~/.config/mise
 [ -f ~/.config/mise/config.toml ] || curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/mise.toml -o ~/.config/mise/config.toml
