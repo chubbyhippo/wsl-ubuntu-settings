@@ -1,9 +1,3 @@
-# Global mise tool set -> ~/.config/mise/config.toml (installed by init.sh).
-# Runtimes for init.el's languages (go, node, erlang, elixir, perl, zig + zls)
-# plus the JVM build tools and python (also the jupyterlab.sh venv base).
-# "lts" only resolves for tools whose mise core plugin ships an LTS alias
-# (java, node); the rest have no LTS release concept, so "latest" is the
-# correct/only pin — setting "lts" there would fail to resolve.
 [tools]
 chezscheme = "latest"
 java = "lts"
