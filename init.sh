@@ -3,8 +3,6 @@
 sudo apt update -y
 sudo DEBIAN_FRONTEND="noninteractive" apt upgrade -y
 
-# wsl settings (wsl.conf / .wslconfig, created only if absent)
-curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/wsl.sh | /usr/bin/env sh
 # apt
 curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/apt.sh | /usr/bin/env sh
 # snap
