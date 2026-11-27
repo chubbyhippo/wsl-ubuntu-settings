@@ -59,25 +59,6 @@ curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/ref
 ```sh
 mise install --yes
 ```
-## cobol lsp build (superbol-free — optional, not in init-el-extras.sh)
-| Item | Value |
-|---|---|
-| Packaging | none — no opam package, no release binaries, and the VSIX ships the server as JavaScript |
-| So | build the native binary from source |
-| Until it is on PATH | `extras/cobol.el` withholds eglot; COBOL stays compiler-only |
-```sh
-sudo apt install -y opam && opam init --no-setup --disable-sandboxing -y
-```
-```sh
-git clone --recurse-submodules https://github.com/OCamlPro/superbol-studio-oss ~/.local/share/superbol-studio-oss
-```
-```sh
-cd ~/.local/share/superbol-studio-oss && make build-deps && make build
-```
-`make build` leaves the binary at the repo root; link it onto PATH:
-```sh
-ln -sf ~/.local/share/superbol-studio-oss/superbol-free ~/.local/bin/superbol-free
-```
 ## add crt
 ```sh
 sudo cp /mnt/c/Path/To/Your/certificate.crt /usr/local/share/ca-certificates/
