@@ -78,10 +78,6 @@ cd ~/.local/share/superbol-studio-oss && make build-deps && make build
 ```sh
 ln -sf ~/.local/share/superbol-studio-oss/superbol-free ~/.local/bin/superbol-free
 ```
-## ai clis install (claude code, codex, gemini)
-```sh
-curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/ai.sh | /usr/bin/env sh
-```
 ## add crt
 ```sh
 sudo cp /mnt/c/Path/To/Your/certificate.crt /usr/local/share/ca-certificates/
