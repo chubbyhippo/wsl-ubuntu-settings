@@ -59,10 +59,6 @@ curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/ref
 ```sh
 mise install --yes
 ```
-## init.el extras tools install
-```sh
-curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-ubuntu-settings/refs/heads/main/init-el-extras.sh | /usr/bin/env sh
-```
 ## cobol lsp build (superbol-free — optional, not in init-el-extras.sh)
 | Item | Value |
 |---|---|
